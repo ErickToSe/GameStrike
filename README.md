@@ -21,7 +21,7 @@ _Contenido._
 3. Instalar dependiencias mediante composer: `composer install`
 4. Crear archivo de variables de entorno: `cp .env.example .env`
 5. Crear llave: `php artisan key:generate`
-6. Creas la base de datos en tu sistema gestor de bases de datos: `CREATE DATABASE GameStrike`
+6. Crear la base de datos en tu sistema gestor de bases de datos: `CREATE DATABASE GameStrike`
 7. Configurar nombre de base de datos en _.env_ y ejecutar migraciones: `php artisan migrate --seed`
 
 ---
