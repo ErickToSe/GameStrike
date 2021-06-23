@@ -25,6 +25,6 @@ _Contenido._
 
 ---
 
-## Cuentas de Github´s: 🖇️
+## Participantes:
 | [<img src="https://avatars.githubusercontent.com/u/80792736?v=4" width="100px;"/><br /><sub><b>Leonel Ramírez</b></sub>](https://github.com/ethryan-ramart)<br />[💻]() [📖]() [👀]() [✅]() | [<img src="https://avatars.githubusercontent.com/u/71098715?s=400&u=d2b067ce65763fd5b318bc3ec3b3f52c47d0c2f0&v=4" width="100px;"/><br /><sub><b>Erick Torres</b></sub>](https://github.com/ErickToSe)<br />[💻]() [📖]() [👀]() [✅]()| 
 | :---: | :---: |
