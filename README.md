@@ -1,4 +1,5 @@
-# UXLN Proyecto Web
+# GameStrike
+#Programación para internet.
 
 ## Integrantes:
 
