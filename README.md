@@ -3,8 +3,8 @@
 
 ## Integrantes:
 
-♣ Leonel Jared Ramírez Martínez <br>
-♦ Erick Alejandro Torres Sebastian
+♠ Leonel Jared Ramírez Martínez <br>
+♥ Erick Alejandro Torres Sebastian
 
 ---
 
