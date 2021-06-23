@@ -26,5 +26,5 @@ _Contenido._
 ---
 
 ## Cuentas de Github´s: 🖇️
-| [<img src="https://avatars3.githubusercontent.com/u/58959667?s=460&u=70b767f334dfea4f9f2c108532a6701f29e25c8e&v=4" width="100px;"/><br /><sub><b>Daniel Ruiz</b></sub>](https://github.com/ethryan-ramart)<br />[💻]() [📖]() [👀]() [✅]() | [<img src="https://avatars1.githubusercontent.com/u/59038283?s=460&u=5166f146a13d99110062d530709517442d2782da&v=4" width="100px;"/><br /><sub><b>Paco Chamorro</b></sub>](https://github.com/ErickToSe)<br />[💻]() [📖]() [👀]() [✅]()| 
+| [<img src="https://avatars.githubusercontent.com/u/80792736?v=4" width="100px;"/><br /><sub><b>Leonel Ramírez</b></sub>](https://github.com/ethryan-ramart)<br />[💻]() [📖]() [👀]() [✅]() | [<img src="https://avatars.githubusercontent.com/u/71098715?s=400&u=d2b067ce65763fd5b318bc3ec3b3f52c47d0c2f0&v=4" width="100px;"/><br /><sub><b>Erick Torres</b></sub>](https://github.com/ErickToSe)<br />[💻]() [📖]() [👀]() [✅]()| 
 | :---: | :---: |
