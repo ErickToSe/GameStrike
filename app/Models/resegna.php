@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class resegna extends Model
 {
     use HasFactory;
+
+    public function juego()
+    {
+        return $this->belongsTo(juego::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(Users::class);
+    }
 }
