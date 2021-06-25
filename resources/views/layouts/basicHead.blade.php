@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
       <link rel="stylesheet" type="text/css" href="css/bootstrap.rtl.min.css">
       <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.rtl.min.css">
-      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      
    </head>
    <body>
       @yield('content')

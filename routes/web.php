@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/formulario', function () {
+    return view('formulario-reseña');
+});
+
+Route::get('/gameprof', function () {
+    return view('game-profile');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
