@@ -131,6 +131,60 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/7.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/7.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Categoria</div>
+                                <div class="project-name">Disparos</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/8.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/8.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Categoria</div>
+                                <div class="project-name">Rol</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/9.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/9.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Categoria</div>
+                                <div class="project-name">Peleas</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/10.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/10.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Categoria</div>
+                                <div class="project-name">Carreras</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/11.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/11.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Categoria</div>
+                                <div class="project-name">Musical</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/12.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/12.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Categoria</div>
+                                <div class="project-name">Plataformas</div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

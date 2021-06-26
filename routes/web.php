@@ -25,6 +25,10 @@ Route::get('/gameprof', function () {
     return view('game-profile');
 });
 
+Route::get('/gamecat', function () {
+    return view('games');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

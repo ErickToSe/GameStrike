@@ -49,7 +49,7 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <!--     La imagen de fondo esta en el css-->
+            <!--     La imagen de fondo esta en el css  game-profile.css en la linea 10932 -->
 
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
