@@ -17,10 +17,10 @@ class CreateJuegosTable extends Migration
         Schema::create('juegos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('sipnosis', 2048);
+            $table->text('sinopsis', 2048);
             $table->string('image_route');
             $table->string('Desarrolladora');
-            $table->decimal('promedio');
+            $table->decimal('promedio')->default(0.0);
             $table->boolean('isDeleted')->default(false);
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
