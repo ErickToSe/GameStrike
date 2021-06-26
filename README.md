@@ -22,7 +22,8 @@ _Contenido._
 4. Crear archivo de variables de entorno: `cp .env.example .env`
 5. Crear llave: `php artisan key:generate`
 6. Crear la base de datos en tu sistema gestor de bases de datos: `CREATE DATABASE GameStrike`
-7. Configurar nombre de base de datos en _.env_ y ejecutar migraciones: `php artisan migrate --seed`
+7. Configurar nombre de base de datos en _.env_ y ejecutar migraciones: `php artisan migrate`
+8. Ejecutar seeds: `php artisan db:seed`
 
 ---
 
