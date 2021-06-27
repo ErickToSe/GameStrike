@@ -1,7 +1,7 @@
 @extends('layouts/basicHead')
 
 @section('tittle')
-   <title> <img>Agregar nuevo juego</title>
+   <title> <img>Editar juego</title>
 @endsection
 
 @section('OwnCSS')
@@ -14,15 +14,14 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Vamos a agregar un nuevo juego</h2>
+                        <h2 class="mt-0">Editemos el juego</h2>
                         <hr class="divider" />
-                        <p class="text-muted mb-5">¡Llena el formulario para poder empezar a criticar!</p>
+                        <p class="text-muted mb-5">Probablemente alguien se equivoco... Ahora tienes que arreglar su desastre</p>
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- <form method="GET" action="{{ url('/formulario') }}"> -->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="editForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
@@ -54,15 +53,14 @@
                            
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">¡En hora buena!¡ Has creado un juego para escribir reseñas que nadie pidio!</div>
+                                    <div class="fw-bolder">¡En hora buena!¡Arreglase el desastre de otro usuario!</div>
                                 </div>
                             </div>
                             
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido subri la reseña!</div></div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido modificar el juego</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Agregar juego</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Arreglar el desastre</button></div>
                         </form>
-                        <!-- </form> -->
                     </div>
                 </div>
             </div>

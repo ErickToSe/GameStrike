@@ -27,7 +27,7 @@ Route::get('/categoriaTest', function () {
 });
 
 Route::get('/newGameTest', function () {
-    return view('add-new-game');
+    return view('edit-review');
 });
 
 Route::get('/Categoria/{genero}', [GeneroController::class, 'show'])->name('games');
