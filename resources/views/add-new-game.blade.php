@@ -21,36 +21,48 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form method="GET" action="{{ url('/formulario') }}">
-                            <!-- Nombre del juego-->
+                        <!-- <form method="GET" action="{{ url('/formulario') }}"> -->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="name" type="text" placeholder="Escribe el nombre aqui..." style="height: 5rem" data-sb-validations="required"></textarea>
-                                <label for="message">Nombre del juego</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">El nombre es necesario</div>
+                                <input class="form-control" id="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
+                                <label for="name">Nombre del juego</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido</div>
                             </div>
-                            <!-- Desarrolladora-->
+                            <!-- Developer  input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="developer" type="text" placeholder="Desarrolladora" style="height: 5rem" data-sb-validations="required"></textarea>
-                                <label for="message">Desarrolladora</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">La desarrolladora es necesaria!</div>
+                                <input class="form-control" id="developer" type="text" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
+                                <label for="developer">Desarrolladora</label>
+                                <div class="invalid-feedback" data-sb-feedback="developer:required">La desarrolladora es nesesaria.</div>
                             </div>
-                            <!-- Genero-->
-
-                            <!-- Imagen-->
+                            <!-- Generos number input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="image" type="text" placeholder="Imagen" style="height: 5rem" data-sb-validations="required"></textarea>
-                                <label for="message">Url de la imagen de portada</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">La imagen es necesaria!</div>
+                                
                             </div>
-                            <!-- Sinopsis-->
+                            <!-- Image input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Reseña</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">La reseña es necesaria!</div>
+                                <input class="form-control" id="image" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
+                                <label for="image">URL de la imagen</label>
+                                <div class="invalid-feedback" data-sb-feedback="image:required">La imagen es requerida</div>
                             </div>
+                            <!-- Overview input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="overview" type="text" placeholder="Ingresa la reseña" style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="overview">Reseña</label>
+                                <div class="invalid-feedback" data-sb-feedback="overview:required">La reseña es OBLIGATORIA</div>
+                            </div>
+                           
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">¡En hora buena!¡ Has escrito una reseña que nadie te pidio!</div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido subri la reseña!</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl Enable" id="submitButton" type="submit">Subir reseña!</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
                         </form>
+                        <!-- </form> -->
                     </div>
                 </div>
             </div>
