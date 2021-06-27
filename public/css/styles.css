@@ -335,6 +335,12 @@ select:disabled {
   display: none;
 }
 
+.img-button{
+  margin:0;
+  padding:0;
+  border: 0;
+}
+
 button,
 [type=button],
 [type=reset],

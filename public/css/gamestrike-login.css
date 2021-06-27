@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
+.img-button{
+    margin:0;
+    padding:0;
+    border: 0;
+  }
+
 html,body{
 background-image: url('https://fondosmil.com/fondo/23221.png');
 background-size: cover;

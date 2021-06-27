@@ -41,7 +41,6 @@
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn float-right login_btn">
 					</div>
-                    <img src="images\logo-transparente-mediano.png">
 				</form>
 			</div>
 			<div class="card-footer">

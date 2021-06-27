@@ -26,6 +26,10 @@ Route::get('/categoriaTest', function () {
     return view('games');
 });
 
+Route::get('/newGameTest', function () {
+    return view('add-new-game');
+});
+
 Route::get('/Categoria/{genero}', [GeneroController::class, 'show'])->name('games');
 Route::get('/', [GeneroController::class, 'index'])->name('index');
 Route::resource('genero', GeneroController::class);

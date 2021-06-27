@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+
+.img-button{
+  margin:0;
+  padding:0;
+  border: 0;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

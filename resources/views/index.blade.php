@@ -6,6 +6,11 @@
 
 @section('OwnCSS')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- SimpleLightbox plugin JS-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 @endsection
 
 @section('content')
@@ -65,7 +70,7 @@
                     @foreach ($allGeneros as $gen)
                         <div class="col-lg-4 col-sm-6">
                             <form action="{{ route('games', $gen) }}" method="GET">
-                                <button class="portfolio-box" type="submit">
+                                <button class="portfolio-box img-button" type="submit">
                                     <img class="img-fluid" src="{{ $gen->image_path }}" alt="Game image" />
                                     <div class="portfolio-box-caption">
                                         <div class="project-category text-white-50">Categoria</div>
