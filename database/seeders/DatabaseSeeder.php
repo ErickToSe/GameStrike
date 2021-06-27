@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             GeneroSeeder::class,
             JuegoSeeder::class,
             Genero_JuegoSeeder::class,
-            UsersSeeder::class
+            UsersSeeder::class,
+            ResegnaSeeder::class
         ]);
     }
 }

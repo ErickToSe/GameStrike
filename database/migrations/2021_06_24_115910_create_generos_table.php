@@ -17,6 +17,7 @@ class CreateGenerosTable extends Migration
         Schema::create('generos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image_path');
             $table->boolean('isDeleted')->default(false);
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));

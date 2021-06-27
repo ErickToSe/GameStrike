@@ -15,17 +15,17 @@ class GeneroSeeder extends Seeder
      */
     public function run()
     {
-        genero::create(['name' => 'Accion']);
-        genero::create(['name' => 'Aventura']);
-        genero::create(['name' => 'Rol']);
-        genero::create(['name' => 'Simulación']);
-        genero::create(['name' => 'Terror']);
-        genero::create(['name' => 'Plataformas']);
-        genero::create(['name' => 'Disparos']);
-        genero::create(['name' => 'Peleas']);
-        genero::create(['name' => 'Musical']);
-        genero::create(['name' => 'Estrategia']);
-        genero::create(['name' => 'Deportes']);
-        genero::create(['name' => 'Carreras']);
+        genero::create(['name' => 'Accion', 'image_path' => 'images\genreImages\Accion.jpg']);
+        genero::create(['name' => 'Aventura', 'image_path' => 'images\genreImages\Aventura.jpg']);
+        genero::create(['name' => 'Rol', 'image_path' => 'images\genreImages\Rol.jpg']);
+        genero::create(['name' => 'Simulación', 'image_path' => 'images\genreImages\Simulación.jpg']);
+        genero::create(['name' => 'Terror', 'image_path' => 'images\genreImages\Terror.jpg']);
+        genero::create(['name' => 'Plataformas', 'image_path' => 'images\genreImages\Plataformas.jpg']);
+        genero::create(['name' => 'Disparos', 'image_path' => 'images\genreImages\Disparos.jpg']);
+        genero::create(['name' => 'Peleas', 'image_path' => 'images\genreImages\Peleas.jpg']);
+        genero::create(['name' => 'Musical', 'image_path' => 'images\genreImages\Musical.jpg']);
+        genero::create(['name' => 'Estrategia', 'image_path' => 'images\genreImages\Estrategia.jpg']);
+        genero::create(['name' => 'Deportes', 'image_path' => 'images\genreImages\Deportes.jpg']);
+        genero::create(['name' => 'Carreras', 'image_path' => 'images\genreImages\Carreras.jpg']);
     }
 }

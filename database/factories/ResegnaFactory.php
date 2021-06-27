@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\resegna;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ResegnaFactory extends Factory
 {
@@ -22,7 +23,10 @@ class ResegnaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => 1,
+            'juego_id' => $this->faker->numberBetween(1, 23),
+            'contenido' => Str::random(50),
+            'calificacion' => $this->faker->numberBetween(0, 10)
         ];
     }
 }
