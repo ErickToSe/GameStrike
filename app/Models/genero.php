@@ -11,6 +11,6 @@ class genero extends Model
 
     public function juegos()
     {
-        return $this->hasMany(juego::class);
+        return $this->belongsToMany(juego::class);
     }
 }

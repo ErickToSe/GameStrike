@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\juego;
+use App\Models\genero;
 use Illuminate\Http\Request;
 
 class JuegoController extends Controller
@@ -44,9 +45,9 @@ class JuegoController extends Controller
      * @param  \App\Models\juego  $juego
      * @return \Illuminate\Http\Response
      */
-    public function show(juego $juego)
+    public function show()
     {
-        //
+
     }
 
     /**

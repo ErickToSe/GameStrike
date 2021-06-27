@@ -58,122 +58,28 @@
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Accion</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Arcade</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Terror</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Deportes</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Estrategia</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Multijugador masivo</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/7.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/7.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Disparos</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/8.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/8.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Rol</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/9.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/9.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Peleas</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/10.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/10.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Carreras</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/11.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/11.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Musical</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/12.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/12.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Categoria</div>
-                                <div class="project-name">Plataformas</div>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach ($allGeneros as $gen)
+                        <div class="col-lg-4 col-sm-6">
+                            <form class="portfolio-box" action="{{ route('games', $gen) }}" method="GET">
+                            <button type="submit">
+                                <img class="img-fluid" src="{{ $gen->image_path }}" alt="Game image" />
+                                <div class="portfolio-box-caption">
+                                    <div class="project-category text-white-50">Categoria</div>
+                                    <div class="project-name">{{ $gen->name }}</div>
+                                </div>
+                            </button>
+                            </form>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
        
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - GameStrike</div></div>
         </footer>
+        
     </body>
 
 @endsection

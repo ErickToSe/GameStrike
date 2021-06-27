@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\genero;
+use App\Models\juego;
 use Illuminate\Http\Request;
 
 class GeneroController extends Controller
@@ -14,7 +15,8 @@ class GeneroController extends Controller
      */
     public function index()
     {
-        //
+        $allGeneros = genero::all();
+        return view('index', compact('allGeneros'));
     }
 
     /**
@@ -46,7 +48,8 @@ class GeneroController extends Controller
      */
     public function show(genero $genero)
     {
-        //
+        $juegos = juego::get();
+        return view('games', compact('genero', 'juegos'));
     }
 
     /**

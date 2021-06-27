@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\JuegoController;
+use App\Http\Controllers\ResegnaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
 Route::get('/formulario', function () {
     return view('formulario-reseña');
@@ -25,9 +26,17 @@ Route::get('/gameprof', function () {
     return view('game-profile');
 });
 
-Route::get('/gamecat', function () {
+Route::get('/categoriaTest', function () {
     return view('games');
 });
+
+Route::get('/Categoria/{genero}', [GeneroController::class, 'show'])->name('games');
+Route::get('/', [GeneroController::class, 'index'])->name('index');
+Route::resource('genero', GeneroController::class);
+
+Route::resource('juego', JuegoController::class);
+
+Route::resource('resegna', ResegnaController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

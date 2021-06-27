@@ -16,6 +16,6 @@ class juego extends Model
 
     public function generos()
     {
-        return $this->hasMany(genero::class);
+        return $this->belongsToMany(genero::class);
     }
 }
