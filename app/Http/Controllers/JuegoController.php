@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\juego;
-use App\Models\genero;
+use App\Models\resegna;
 use Illuminate\Http\Request;
 
 class JuegoController extends Controller
@@ -48,6 +48,12 @@ class JuegoController extends Controller
     public function show()
     {
 
+    }
+
+    public function showResegnas(juego $juego)
+    {
+        $resegnas = resegna::get();
+        return view('game-profile', compact('juego', 'resegnas'));
     }
 
     /**

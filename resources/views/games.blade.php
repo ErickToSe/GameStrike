@@ -4,6 +4,10 @@
    <title> <img>GameStrike</title>
 @endsection
 
+@section('OwnCSS')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/games.css') }}">
+@endsection
+
 @section('content')
     <body id="page-top">
         <!-- Navigation-->
@@ -45,12 +49,14 @@
                 <div class="row g-0">
                     @foreach ($genero->juegos as $juego)
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href={{asset($juego->image_route)}} title="$juego->name">
-                            <img class="img-fluid" src={{asset($juego->image_route)}} alt="Game_Image" />
-                            <div class="portfolio-box-caption">
-                                <div class="project-name">{{ $juego->name }}</div>
-                            </div>
-                        </a>
+                        <form action="{{ route('game-profile', $juego) }}" method="GET">
+                            <button class="portfolio-box" type="submit">
+                                <img class="img-fluid" src={{asset($juego->image_route)}} alt="Game_Image" />
+                                <div class="portfolio-box-caption">
+                                    <div class="project-name">{{ $juego->name }}</div>
+                                </div>
+                            </button>
+                        </form>
                     </div>
                     @endforeach
                 </div>

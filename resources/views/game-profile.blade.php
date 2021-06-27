@@ -4,6 +4,10 @@
    <title> <img>GameStrike</title>
 @endsection
 
+@section('OwnCSS')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/game-profile.css') }}">
+@endsection
+
 @section('content')
     <body id="page-top">
         <!-- Navigation-->
@@ -29,24 +33,27 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead" style="background: linear-gradient(to bottom, rgba(145, 90, 51, 0.8) 0%, rgba(126, 86, 58, 0.8) 100%), url("<?php echo asset($juego->image_route);?>");">
             <!--     La imagen de fondo esta en el css  game-profile.css en la linea 10932 -->
-
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">NOMBRE DEL JUEGO</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Aqui va nombre de la desarrolladora</p>
-                        <p class="text-white-75 mb-5">Aqui va el genero</p>
-                        <p class="text-white-75 mb-5">Aqui va el promedio de la calificacion</p>
-                        <p class="text-white-75 mb-5">Sinopsis</p>
-                        
+                <div class="container px-4 px-lg-5 h-100">
+                    <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                        <div class="col-lg-8 align-self-end">
+                            <h1 class="text-white font-weight-bold">{{$juego->name}}</h1>
+                            <hr class="divider" />
+                        </div>
+                        <div class="col-lg-8 align-self-baseline">
+                            <p class="text-white-75 mb-5">Desarrolladora:<br>{{$juego->desarrolladora}}</p>
+                            <p class="text-white-75 mb-5">Generos:<br>
+                                @foreach($juego->generos as $genero)
+                                    {{ $genero->name }} 
+                                @endforeach
+                            </p>
+                            <p class="text-white-75 mb-5">Promedio:<br>{{$juego->promedio}}/10</p>
+                            <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
 
         <!-- Contact-->

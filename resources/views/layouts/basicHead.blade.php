@@ -9,7 +9,7 @@
       <meta name="author" content="" />
 
       <!--CSS-->
-      <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+      @yield('OwnCSS')
       <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-utilities.min.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-grid.min.css') }}">
@@ -22,7 +22,6 @@
       <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
       <!-- SimpleLightbox plugin CSS-->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="css/styles.css">
 
    </head>
    @yield('content')

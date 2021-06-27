@@ -22,10 +22,6 @@ Route::get('/formulario', function () {
     return view('formulario-reseña');
 });
 
-Route::get('/gameprof', function () {
-    return view('game-profile');
-});
-
 Route::get('/categoriaTest', function () {
     return view('games');
 });
@@ -34,6 +30,7 @@ Route::get('/Categoria/{genero}', [GeneroController::class, 'show'])->name('game
 Route::get('/', [GeneroController::class, 'index'])->name('index');
 Route::resource('genero', GeneroController::class);
 
+Route::get('/Juego/{juego}', [JuegoController::class, 'showResegnas'])->name('game-profile');
 Route::resource('juego', JuegoController::class);
 
 Route::resource('resegna', ResegnaController::class);

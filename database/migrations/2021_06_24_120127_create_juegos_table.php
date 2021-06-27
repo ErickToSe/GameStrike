@@ -19,7 +19,7 @@ class CreateJuegosTable extends Migration
             $table->string('name');
             $table->text('sinopsis', 2048);
             $table->string('image_route');
-            $table->string('Desarrolladora');
+            $table->string('desarrolladora');
             $table->decimal('promedio')->default(0.0);
             $table->boolean('isDeleted')->default(false);
             $table->timestamp('updated_at')->nullable();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\resegna;
+use APP\Model\juego;
 use Illuminate\Http\Request;
 
 class ResegnaController extends Controller
@@ -46,7 +47,7 @@ class ResegnaController extends Controller
      */
     public function show(resegna $resegna)
     {
-        //
+        
     }
 
     /**

@@ -4,6 +4,10 @@
    <title> <img>GameStrike</title>
 @endsection
 
+@section('OwnCSS')
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+@endsection
+
 @section('content')
     <body id="page-top">
         <!-- Navigation-->
@@ -60,14 +64,14 @@
                 <div class="row g-0">
                     @foreach ($allGeneros as $gen)
                         <div class="col-lg-4 col-sm-6">
-                            <form class="portfolio-box" action="{{ route('games', $gen) }}" method="GET">
-                            <button type="submit">
-                                <img class="img-fluid" src="{{ $gen->image_path }}" alt="Game image" />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50">Categoria</div>
-                                    <div class="project-name">{{ $gen->name }}</div>
-                                </div>
-                            </button>
+                            <form action="{{ route('games', $gen) }}" method="GET">
+                                <button class="portfolio-box" type="submit">
+                                    <img class="img-fluid" src="{{ $gen->image_path }}" alt="Game image" />
+                                    <div class="portfolio-box-caption">
+                                        <div class="project-category text-white-50">Categoria</div>
+                                        <div class="project-name">{{ $gen->name }}</div>
+                                    </div>
+                                </button>
                             </form>
                         </div>
                     @endforeach
