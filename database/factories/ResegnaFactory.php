@@ -25,7 +25,7 @@ class ResegnaFactory extends Factory
         return [
             'user_id' => 1,
             'juego_id' => $this->faker->numberBetween(1, 23),
-            'contenido' => Str::random(50),
+            'contenido' => Str::random(150),
             'calificacion' => $this->faker->numberBetween(0, 10)
         ];
     }

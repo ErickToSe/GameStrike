@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\resegna;
 use APP\Model\juego;
+use APP\Model\User;
 use Illuminate\Http\Request;
 
 class ResegnaController extends Controller

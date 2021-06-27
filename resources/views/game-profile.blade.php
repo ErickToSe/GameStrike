@@ -13,7 +13,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Game Strike</a>
+                <a class="navbar-brand" href="{{ url('/') }}">Game Strike</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -33,7 +33,8 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background: linear-gradient(to bottom, rgba(145, 90, 51, 0.8) 0%, rgba(126, 86, 58, 0.8) 100%), url("<?php echo asset($juego->image_route);?>");">
+        <header class="masthead"style="position: relative;display: inline-block;overflow: hidden;width: 100%;">
+            <img id="backImage" src="{{ asset($juego->image_route) }}"/>
             <!--     La imagen de fondo esta en el css  game-profile.css en la linea 10932 -->
                 <div class="container px-4 px-lg-5 h-100">
                     <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -50,7 +51,6 @@
                             </p>
                             <p class="text-white-75 mb-5">Promedio:<br>{{$juego->promedio}}/10</p>
                             <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
-                            
                         </div>
                     </div>
                 </div>
@@ -65,18 +65,12 @@
                         <hr class="divider" />
                         <hr>
                         <!-- Aqui iria el loop ------------------------------------------------------------------------------------ -->
-                        <p class="text-muted mb-5">Esteban Quito</p>
-                        <p class="text-muted mb-5">8/10</p>
-                        <p class="text-muted mb-5">La verdad es que el juego me gusto mucho, ya que la musica, los sondios y la jugabilidad iban muy a la par. por lo que la experiencia fue muy buena.</p>
+                        @foreach($juego->resegnas as $resegna)
+                            <p class="text-muted mb-5">{{$resegna->user->name}}</p>
+                            <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
+                            <p class="text-muted mb-5">{{$resegna->contenido}}</p>
                         <hr>
-                        <p class="text-muted mb-5">Rosa Melano</p>
-                        <p class="text-muted mb-5">5/10</p>
-                        <p class="text-muted mb-5">El juego no me gusto, esta supravalorado y es muy mindstream.</p>
-                        <hr>
-                        <p class="text-muted mb-5">Casimiro Miraflores</p>
-                        <p class="text-muted mb-5">10/10</p>
-                        <p class="text-muted mb-5">El juego es increible! Mirar para creer, yo critique mucho este juego pero cuando lo probe me cerro la boca.</p>
-                        <hr>
+                        @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
 
                         <button class="btn btn-primary btn-xl" href="">¡Crea tu propia reseña!</button>
