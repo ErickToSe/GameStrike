@@ -54,10 +54,13 @@
                             </p>
                             <p class="text-white-75 mb-5">Promedio:<br>{{$juego->resegnas->avg('calificacion')}}/10</p>
                             <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
-
-                            <button id=""href="#" class="btn btn-secondary float">Editar</button> <button id=""href="#" class="btn btn-secondary float">Eliminar</button> 
-
                             <!-- Boton de editar y eliminar para administrador -->
+                            <form method="POST" action="{{ route('juego.delete', $juego) }}"> @csrf
+                                <button class="btn btn-secondary float">Eliminar</button>
+                            </form>
+                            <form method="POST" action="{{ route('juego.update', $juego) }}"> @csrf
+                                <button class="btn btn-secondary float">Editar</button>
+                            </form>
                         </div>
                     </div>
                 </div>

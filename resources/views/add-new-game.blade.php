@@ -22,18 +22,18 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
                         <!-- <form method="GET" action="{{ url('/formulario') }}"> -->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form method="POST" action="{{ route('juego.store') }}" id="contactForm" > @csrf
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
                                 <label for="name">Nombre del juego</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido</div>
                             </div>
                             <!-- Developer  input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="developer" type="text" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
-                                <label for="developer">Desarrolladora</label>
-                                <div class="invalid-feedback" data-sb-feedback="developer:required">La desarrolladora es nesesaria.</div>
+                                <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
+                                <label for="desarrolladora">Desarrolladora</label>
+                                <div class="invalid-feedback" data-sb-feedback="desarrolladora:required">La desarrolladora es nesesaria.</div>
                             </div>
                             <!-- Generos number input-->
                             <div class="form-floating mb-3">
@@ -115,15 +115,15 @@
                             </div>
                             <!-- Image input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="image" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
-                                <label for="image">URL de la imagen</label>
-                                <div class="invalid-feedback" data-sb-feedback="image:required">La imagen es requerida</div>
+                                <input class="form-control" id="image_route" name="image_route" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
+                                <label for="image_route">URL de la imagen</label>
+                                <div class="invalid-feedback" data-sb-feedback="image_route:required">La imagen es requerida</div>
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="overview" type="text" placeholder="Ingresa la reseña" style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="overview">Reseña</label>
-                                <div class="invalid-feedback" data-sb-feedback="overview:required">La reseña es OBLIGATORIA</div>
+                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la reseña" style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="sinopsis">Sinopsis</label>
+                                <div class="invalid-feedback" data-sb-feedback="sinopsis:required">La reseña es OBLIGATORIA</div>
                             </div>
                            
                             <div class="d-none" id="submitSuccessMessage">
@@ -134,7 +134,7 @@
                             
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido subri la reseña!</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Agregar juego</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Agregar juego</button></div>
                         </form>
                         <!-- </form> -->
                     </div>

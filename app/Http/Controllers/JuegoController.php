@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\juego;
+use App\Models\genero;
 use App\Models\resegna;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -16,7 +17,8 @@ class JuegoController extends Controller
      */
     public function index()
     {
-        //
+        $juegos = juego::all();
+        return view('all-games', compact('juegos'));
     }
 
     /**
@@ -26,7 +28,7 @@ class JuegoController extends Controller
      */
     public function create()
     {
-        //
+        return view('add-new-game');
     }
 
     /**
@@ -37,7 +39,15 @@ class JuegoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $allGeneros = genero::all();
+        $newJuego = new juego();
+        $newJuego->name = $request->name;
+        $newJuego->sinopsis = $request->sinopsis;
+        $newJuego->desarrolladora = $request->desarrolladora;
+        $newJuego->image_route = $request->image_route;
+        ///$newJuego->generos->attach($request->category_id);
+        $newJuego->save();
+        return redirect()->route('index', compact('allGeneros'));
     }
 
     /**
@@ -88,6 +98,9 @@ class JuegoController extends Controller
      */
     public function destroy(juego $juego)
     {
-        //
+        $allGeneros = genero::all();
+        $juego->isDeleted = true;
+        $juego->save();
+        return redirect()->route('index', compact('allGeneros'));
     }
 }

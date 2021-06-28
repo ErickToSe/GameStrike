@@ -93,7 +93,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
                     <br>
-                        <form method="GET" action="{{ url('/')}}">
+                        <form method="GET" action="{{ route('all-games')}}">
                              <button class="btn btn-primary btn-xl" >Ver todos los juegos</button>
                         </form>
                     </div>

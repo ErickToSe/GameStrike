@@ -41,7 +41,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">{{$genero->name}}:</h2>
+                        <h2 class="mt-0">Todos los juegos:</h2>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-                    @foreach ($genero->juegos as $juego)
+                    @foreach ($juegos as $juego)
                         @if ($juego->isDeleted === 0)
                             <div class="col-lg-4 col-sm-6">
                                 <form action="{{ route('game-profile', $juego) }}" method="GET">
@@ -68,13 +68,12 @@
             </div>
         </div>
        
-       <!-- Boton para agregar juegos solo para admin-->
-       <section class="Todos-los-juegos" id="boton">
+        <section class="Todos-los-juegos" id="boton">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
                     <br>
-                        <form method="POST" action="{{ route('add-new-game') }}"> @csrf
+                        <form method="GET" action="{{ url('/')}}"> @csrf
                              <button class="btn btn-primary btn-xl" >Agregar juego</button>
                         </form>
                     </div>
