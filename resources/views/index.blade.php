@@ -29,6 +29,7 @@
                                 
                             <form method="POST" name="logout" action="{{ route('logout') }}">
                                 @csrf
+                                <li class="nav-item"><a class="nav-link" href="http://gamestrike.test/user/profile">Perfil</a></li> 
                                 <li class="nav-item"><a class="nav-link" href="javascript:document.logout.submit()">Log Out</a></li>
                             </form>
 
