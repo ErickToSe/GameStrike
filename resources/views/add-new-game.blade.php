@@ -41,73 +41,73 @@
                                     <div class="fw-bolder">Generos</div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Accion" name="Accion">
+                                    <input class="form-check-input" type="checkbox" id="Accion" name="Accion">
                                     <label class="form-check-label" for="Accion">
                                         Accion
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Aventura" name="Aventura">
+                                    <input class="form-check-input" type="checkbox" id="Aventura" name="Aventura">
                                     <label class="form-check-label" for="Aventura">
                                         Aventura
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Rol" name="Rol">
+                                    <input class="form-check-input" type="checkbox" id="Rol" name="Rol">
                                     <label class="form-check-label" for="Rol">
                                          Rol
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Simulación" name="Simulacion">
+                                    <input class="form-check-input" type="checkbox" id="Simulación" name="Simulacion">
                                     <label class="form-check-label" for="Simulación">
                                         Simulación
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Terror" name="Terror">
+                                    <input class="form-check-input" type="checkbox" id="Terror" name="Terror">
                                     <label class="form-check-label" for="Terror">
                                         Terror
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Plataformas" name="Plataformas">
+                                    <input class="form-check-input" type="checkbox" id="Plataformas" name="Plataformas">
                                     <label class="form-check-label" for="Plataformas">
                                         Plataformas
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Disparos" name="Disparos">
+                                    <input class="form-check-input" type="checkbox" id="Disparos" name="Disparos">
                                     <label class="form-check-label" for="Disparos">
                                         Disparos
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Peleas" name="Peleas">
+                                    <input class="form-check-input" type="checkbox" id="Peleas" name="Peleas">
                                     <label class="form-check-label" for="Peleas">
                                         Peleas
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Musical" name="Musical">
+                                    <input class="form-check-input" type="checkbox" id="Musical" name="Musical">
                                     <label class="form-check-label" for="Musical">
                                         Musical
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Estrategia" name="Estrategia">
+                                    <input class="form-check-input" type="checkbox" id="Estrategia" name="Estrategia">
                                     <label class="form-check-label" for="Estrategia">
                                         Estrategia
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Deportes" name="Deportes">
+                                    <input class="form-check-input" type="checkbox" id="Deportes" name="Deportes">
                                     <label class="form-check-label" for="Deportes">
                                         Deportes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Carreras" name="Carreras" >
+                                    <input class="form-check-input" type="checkbox" id="Carreras" name="Carreras" >
                                     <label class="form-check-label" for="Carreras">
                                         Carreras
                                     </label>

@@ -48,20 +48,26 @@ Route::post('/email/verification-notification', function (Request $request) {
 
 /*   TERMINA PARTE DE VERIFICACION EMAIL*/
 
+
 Route::get('/Categoria/{genero}', [GeneroController::class, 'show'])->name('games');
 Route::get('/', [GeneroController::class, 'index'])->name('index');
 Route::resource('genero', GeneroController::class);
 
+/*   ADMIN ROUTES    */
 Route::post('/Juego/Agregar-Juego/store', [JuegoController::class, 'store'])->name('juego.store');
 Route::post('/Juego/Agregar-Juego', [JuegoController::class, 'create'])->name('add-new-game');
-Route::get('/Juegos', [JuegoController::class, 'index'])->name('all-games');
-Route::get('/Juego/{juego}', [JuegoController::class, 'showResegnas'])->name('game-profile');
 Route::post('/Juego/{juego}/destroy', [JuegoController::class, 'destroy'])->name('juego.delete');
 Route::post('/Juego/{juego}/update', [JuegoController::class, 'update'])->name('juego.update');
+/*   PUBLIC ROUTES    */
+Route::get('/Juegos', [JuegoController::class, 'index'])->name('all-games');
+Route::get('/Juego/{juego}', [JuegoController::class, 'showResegnas'])->name('game-profile');
 Route::resource('juego', JuegoController::class);
 
-Route::post('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create'])->name('formulario-reseña');
+/*   ADMIN ROUTES    */
+Route::post('/juego/resegna/destroy', [ResegnaController::class, 'destroy'])->name('resegna.delete');
+/*   USERS ROUTES    */
 Route::post('/resegna.store', [ResegnaController::class, 'store'])->name('resegna.store');
+Route::post('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create'])->name('formulario-reseña');
 Route::resource('resegna', ResegnaController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [GeneroController::class, 'index'])->name('dashboard');

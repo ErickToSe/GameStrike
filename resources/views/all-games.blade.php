@@ -73,7 +73,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
                     <br>
-                        <form method="GET" action="{{ url('/')}}"> @csrf
+                    <form method="POST" action="{{ route('add-new-game') }}"> @csrf
                              <button class="btn btn-primary btn-xl" >Agregar juego</button>
                         </form>
                     </div>

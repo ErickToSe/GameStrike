@@ -45,8 +45,43 @@ class JuegoController extends Controller
         $newJuego->sinopsis = $request->sinopsis;
         $newJuego->desarrolladora = $request->desarrolladora;
         $newJuego->image_route = $request->image_route;
-        ///$newJuego->generos->attach($request->category_id);
         $newJuego->save();
+        if($request->has('Accion')){
+            $newJuego->generos()->attach(1);
+        }
+        if($request->has('Aventura')){
+            $newJuego->generos()->attach(2);
+        }
+        if($request->has('Rol')){
+            $newJuego->generos()->attach(3);
+        }
+        if($request->has('Simulacion')){
+            $newJuego->generos()->attach(4);
+        }
+        if($request->has('Terror')){
+            $newJuego->generos()->attach(5);
+        }
+        if($request->has('Plataformas')){
+            $newJuego->generos()->attach(6);
+        }
+        if($request->has('Disparos')){
+            $newJuego->generos()->attach(7);
+        }
+        if($request->has('Peleas')){
+            $newJuego->generos()->attach(8);
+        }
+        if($request->has('Musical')){
+            $newJuego->generos()->attach(9);
+        }
+        if($request->has('Estrategia')){
+            $newJuego->generos()->attach(10);
+        }
+        if($request->has('Deportes')){
+            $newJuego->generos()->attach(11);
+        }
+        if($request->has('Carreras')){
+            $newJuego->generos()->attach(12);
+        }
         return redirect()->route('index', compact('allGeneros'));
     }
 
@@ -75,7 +110,14 @@ class JuegoController extends Controller
      */
     public function edit(juego $juego)
     {
-        //
+        /*
+        if($request->has('Accion')){
+            $newJuego->generos()->attach(1);
+        }
+        else{
+            $newJuego->generos()->detach(1);
+        }
+        */
     }
 
     /**

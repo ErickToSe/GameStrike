@@ -38,7 +38,6 @@ class ResegnaController extends Controller
      */
     public function store(Request $request)
     {
-        $juego = juego::where('id', $request->juego_id);
         $request->merge(['user_id' => Auth::id()]);
         resegna::create($request->all());
         return redirect()->route('game-profile', $request->juego_id);
@@ -84,8 +83,9 @@ class ResegnaController extends Controller
      * @param  \App\Models\resegna  $resegna
      * @return \Illuminate\Http\Response
      */
-    public function destroy(resegna $resegna)
+    public function destroy(Request $request)
     {
-        //
+        resegna::find($request->id)->update(['isDeleted'=>true]);
+        return redirect()->route('game-profile', resegna::findOrFail($request->id)->juego_id);
     }
 }
