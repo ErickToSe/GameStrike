@@ -69,9 +69,11 @@
                         <hr>
                         <!-- Aqui iria el loop ------------------------------------------------------------------------------------ -->
                         @foreach($juego->resegnas as $resegna)
-                            <p class="text-muted mb-5">{{$resegna->user->name}}</p>
-                            <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
-                            <p class="text-muted mb-5">{{$resegna->contenido}}</p>
+                            @if ($resegna->isDeleted === 0)
+                                <p class="text-muted mb-5">{{$resegna->user->name}}</p>
+                                <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
+                                <p class="text-muted mb-5">{{$resegna->contenido}}</p>
+                            @endif
                         <hr>
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->

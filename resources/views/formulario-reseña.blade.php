@@ -46,7 +46,6 @@
                         <form action="{{ route('resegna.store') }}" method="POST">
                             @csrf
                             <!-- Calificacion -->
-                            //23:50
                             <div class="form-floating mb-3">
                                 <label for="calificacion">Califica el juego.</label>
                                 <input type="range" min="0" max="10" step="1" list="calificacion" name="calificacion" id="calificacion">
