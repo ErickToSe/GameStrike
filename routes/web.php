@@ -27,6 +27,7 @@ Route::get('/newGameTest', function () {
     return view('edit-game');
 });
 
+
 /*   INICIA PARTE DE VERIFICACION EMAIL*/
 
 Route::get('/email/verify', function () {
