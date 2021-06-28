@@ -73,14 +73,16 @@
                         <hr>
                         <!-- Aqui iria el loop ------------------------------------------------------------------------------------ -->
                         @foreach($juego->resegnas as $resegna)
-                            
-                            <button id=""href="#" class="btn btn-secondary float-start">Eliminar</button> 
-                            <br><br>
-                            <p class="text-muted mb-5">{{$resegna->user->name}}</p>   
-                            <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
-                            <p class="text-muted mb-5">{{$resegna->contenido}}</p>
-                            
-                            <hr>
+
+                            @if ($resegna->isDeleted === 0)
+                                <button id=""href="#" class="btn btn-secondary float-start">Eliminar</button> 
+                                <br><br>
+                                <p class="text-muted mb-5">{{$resegna->user->name}}</p>
+                                <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
+                                <p class="text-muted mb-5">{{$resegna->contenido}}</p>
+                                <hr>
+                            @endif
+
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
                         <form action="{{ route('formulario-reseña', $juego) }}" method="POST">

@@ -18,10 +18,17 @@ class UsersSeeder extends Seeder
     {
         User::create([
             'name' => 'SoyAdmi',
-            'email' => 'torres.sebastian.erick@gmail.com', 
+            'email' => 'SoyAdmi@gmail.com', 
             'email_verified_at' => now(), 
             'password' => Hash::make('password'), 
             'isAdmin' => true
+        ]); 
+        User::create([
+            'name' => 'NoSoyAdmi',
+            'email' => 'NoSoyAdmi@gmail.com', 
+            'email_verified_at' => now(), 
+            'password' => Hash::make('password'), 
+            'isAdmin' => false
         ]); 
     }
 }
