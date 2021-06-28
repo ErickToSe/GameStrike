@@ -108,16 +108,10 @@ class JuegoController extends Controller
      * @param  \App\Models\juego  $juego
      * @return \Illuminate\Http\Response
      */
-    public function edit(juego $juego)
+    public function edit(Request $request, juego $juego)
     {
-        /*
-        if($request->has('Accion')){
-            $newJuego->generos()->attach(1);
-        }
-        else{
-            $newJuego->generos()->detach(1);
-        }
-        */
+        $data = juego::find($request->id);
+        return view('edit-game', compact('data'));
     }
 
     /**
@@ -127,9 +121,73 @@ class JuegoController extends Controller
      * @param  \App\Models\juego  $juego
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, juego $juego)
+    public function updateGame(Request $request)
     {
-        //
+        $resegnas = resegna::get();
+        $juego = juego::find($request->id);
+        //dd($data);
+        $juego->update($request->except('_token', '_method'));
+        if($request->has('Accion')){
+            $juego->generos()->attach(1);
+        } else {
+            $juego->generos()->detach(1);
+        }
+        if($request->has('Aventura')){
+            $juego->generos()->attach(2);
+        } else {
+            $juego->generos()->detach(2);
+        }
+        if($request->has('Rol')){
+            $juego->generos()->attach(3);
+        }  else {
+            $juego->generos()->detach(3);
+        }
+        if($request->has('Simulacion')){
+            $juego->generos()->attach(4);
+        } else {
+            $juego->generos()->detach(4);
+        }
+        if($request->has('Terror')){
+            $juego->generos()->attach(5);
+        } else {
+            $juego->generos()->detach(5);
+        }
+        if($request->has('Plataformas')){
+            $juego->generos()->attach(6);
+        } else {
+            $juego->generos()->detach(6);
+        }
+        if($request->has('Disparos')){
+            $juego->generos()->attach(7);
+        } else {
+            $juego->generos()->detach(7);
+        }
+        if($request->has('Peleas')){
+            $juego->generos()->attach(8);
+        } else {
+            $juego->generos()->detach(8);
+        }
+        if($request->has('Musical')){
+            $juego->generos()->attach(9);
+        } else {
+            $juego->generos()->detach(9);
+        }
+        if($request->has('Estrategia')){
+            $juego->generos()->attach(10);
+        } else {
+            $juego->generos()->detach(10);
+        }
+        if($request->has('Deportes')){
+            $juego->generos()->attach(11);
+        } else {
+            $juego->generos()->detach(11);
+        }
+        if($request->has('Carreras')){
+            $juego->generos()->attach(12);
+        } else {
+            $juego->generos()->detach(12);
+        }
+        return redirect()->route('game-profile', compact('juego', 'resegnas'));
     }
 
     /**

@@ -59,7 +59,8 @@
                             <form method="POST" action="{{ route('juego.delete', $juego) }}"> @csrf
                                 <button class="btn btn-secondary float">Eliminar</button>
                             </form>
-                            <form method="POST" action="{{ route('juego.update', $juego) }}"> @csrf
+                            <form method="GET" action="{{ route('juego.edit', $juego) }}"> @csrf
+                                <input type="hidden" name="id" value="{{ $juego->id }}">
                                 <button class="btn btn-secondary float">Editar</button>
                             </form>
                         </div>
@@ -78,7 +79,7 @@
                         <!-- Aqui iria el loop ------------------------------------------------------------------------------------ -->
                         @foreach($juego->resegnas as $resegna)
 
-                            @if ($resegna->isDeleted === 0) 
+                            @if ($resegna->isDeleted === 0)
                                 <form method="POST" action="{{ route('resegna.delete') }}"> @csrf
                                     <input type="hidden" name="id" value="{{ $resegna->id }}">
                                     <button class="btn btn-secondary float-start">Eliminar</button>
