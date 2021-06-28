@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\resegna;
-use APP\Model\juego;
-use APP\Model\User;
+use App\Models\juego;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ResegnaController extends Controller
 {
@@ -24,9 +25,9 @@ class ResegnaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(juego $juego)
     {
-        //
+        return view('formulario-reseña', compact('juego'));
     }
 
     /**
@@ -37,7 +38,10 @@ class ResegnaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $juego = juego::where('id', $request->juego_id);
+        $request->merge(['user_id' => Auth::id()]);
+        resegna::create($request->all());
+        return redirect()->route('game-profile', $request->juego_id);
     }
 
     /**

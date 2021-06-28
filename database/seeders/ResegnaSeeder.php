@@ -13,6 +13,6 @@ class ResegnaSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\resegna::factory(50)->create();
+        \App\Models\resegna::factory(150)->create();
     }
 }

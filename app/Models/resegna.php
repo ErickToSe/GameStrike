@@ -9,6 +9,8 @@ class resegna extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['juego_id', 'user_id', 'contenido', 'calificacion'];
+
     public function juego()
     {
         return $this->belongsTo(juego::class);

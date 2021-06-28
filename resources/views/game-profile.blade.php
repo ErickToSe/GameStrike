@@ -49,7 +49,7 @@
                                     {{ $genero->name }} 
                                 @endforeach
                             </p>
-                            <p class="text-white-75 mb-5">Promedio:<br>{{$juego->promedio}}/10</p>
+                            <p class="text-white-75 mb-5">Promedio:<br>{{$juego->resegnas->avg('calificacion')}}/10</p>
                             <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
                         </div>
                     </div>
@@ -72,8 +72,10 @@
                         <hr>
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
-
-                        <button class="btn btn-primary btn-xl" href="">¡Crea tu propia reseña!</button>
+                        <form action="{{ route('formulario-reseña', $juego) }}" method="POST">
+                            @csrf
+                            <button class="btn btn-primary btn-xl" href="">¡Crea tu propia reseña!</button>
+                        </form>
                     </div>
                 </div>
             </div>

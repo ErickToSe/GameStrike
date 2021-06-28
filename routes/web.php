@@ -17,11 +17,6 @@ use App\Http\Controllers\ResegnaController;
 |
 */
 
-
-Route::get('/formulario', function () {
-    return view('formulario-reseña');
-});
-
 Route::get('/categoriaTest', function () {
     return view('games');
 });
@@ -37,6 +32,8 @@ Route::resource('genero', GeneroController::class);
 Route::get('/Juego/{juego}', [JuegoController::class, 'showResegnas'])->name('game-profile');
 Route::resource('juego', JuegoController::class);
 
+Route::post('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create'])->name('formulario-reseña');
+Route::post('/resegna.store', [ResegnaController::class, 'store'])->name('resegna.store');
 Route::resource('resegna', ResegnaController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

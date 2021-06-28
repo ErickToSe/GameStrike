@@ -20,7 +20,6 @@ class CreateJuegosTable extends Migration
             $table->text('sinopsis', 2048);
             $table->string('image_route');
             $table->string('desarrolladora');
-            $table->decimal('promedio')->default(0.0);
             $table->boolean('isDeleted')->default(false);
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
