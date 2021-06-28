@@ -14,25 +14,26 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Editemos el juego</h2>
+                        <h2 class="mt-0">Editemos el juego <b>{{ $data->name }}!</b></h2>
                         <hr class="divider" />
-                        <p class="text-muted mb-5">Probablemente alguien se equivoco... Ahora tienes que arreglar su desastre</p>
+                        <p class="text-muted mb-5">Probablemente alguien se equivoco... Ahora tienes que arreglar su desastre</p> 
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form id="editForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="editForm" action="{{ route('juego.updateGame') }}" method="POST"> @csrf
                             <!-- Name input-->
+                            <input type="hidden" name="id" value="{{ $data->id }}">
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" value="{{ $data->name }}" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
                                 <label for="name">Nombre del juego</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido</div>
                             </div>
                             <!-- Developer  input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="developer" type="text" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
-                                <label for="developer">Desarrolladora</label>
-                                <div class="invalid-feedback" data-sb-feedback="developer:required">La desarrolladora es nesesaria.</div>
+                                <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" value="{{ $data->desarrolladora }}" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
+                                <label for="desarrolladora">Desarrolladora</label>
+                                <div class="invalid-feedback" data-sb-feedback="desarrolladora:required">La desarrolladora es nesesaria.</div>
                             </div>
                             <!-- Generos number input-->
                             <div class="form-floating mb-3">
@@ -40,73 +41,73 @@
                                     <div class="fw-bolder">Generos</div>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Accion" name="Accion">
+                                    <input class="form-check-input" type="checkbox" id="Accion" name="Accion">
                                     <label class="form-check-label" for="Accion">
                                         Accion
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Aventura" name="Aventura">
+                                    <input class="form-check-input" type="checkbox" id="Aventura" name="Aventura">
                                     <label class="form-check-label" for="Aventura">
                                         Aventura
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Rol" name="Rol">
+                                    <input class="form-check-input" type="checkbox" id="Rol" name="Rol">
                                     <label class="form-check-label" for="Rol">
                                          Rol
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Simulación" name="Simulacion">
+                                    <input class="form-check-input" type="checkbox" id="Simulación" name="Simulacion">
                                     <label class="form-check-label" for="Simulación">
                                         Simulación
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Terror" name="Terror">
+                                    <input class="form-check-input" type="checkbox" id="Terror" name="Terror">
                                     <label class="form-check-label" for="Terror">
                                         Terror
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Plataformas" name="Plataformas">
+                                    <input class="form-check-input" type="checkbox" id="Plataformas" name="Plataformas">
                                     <label class="form-check-label" for="Plataformas">
                                         Plataformas
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Disparos" name="Disparos">
+                                    <input class="form-check-input" type="checkbox" id="Disparos" name="Disparos">
                                     <label class="form-check-label" for="Disparos">
                                         Disparos
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Peleas" name="Peleas">
+                                    <input class="form-check-input" type="checkbox" id="Peleas" name="Peleas">
                                     <label class="form-check-label" for="Peleas">
                                         Peleas
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Musical" name="Musical">
+                                    <input class="form-check-input" type="checkbox" id="Musical" name="Musical">
                                     <label class="form-check-label" for="Musical">
                                         Musical
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Estrategia" name="Estrategia">
+                                    <input class="form-check-input" type="checkbox" id="Estrategia" name="Estrategia">
                                     <label class="form-check-label" for="Estrategia">
                                         Estrategia
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Deportes" name="Deportes">
+                                    <input class="form-check-input" type="checkbox" id="Deportes" name="Deportes">
                                     <label class="form-check-label" for="Deportes">
                                         Deportes
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="Carreras" name="Carreras" >
+                                    <input class="form-check-input" type="checkbox" id="Carreras" name="Carreras" >
                                     <label class="form-check-label" for="Carreras">
                                         Carreras
                                     </label>
@@ -114,15 +115,15 @@
                             </div>
                             <!-- Image input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="image" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
+                                <input class="form-control" id="image_route" name="image_route" value="{{ $data->image_route }}" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
                                 <label for="image">URL de la imagen</label>
-                                <div class="invalid-feedback" data-sb-feedback="image:required">La imagen es requerida</div>
+                                <div class="invalid-feedback" data-sb-feedback="image_route:required">La imagen es requerida</div>
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="overview" type="text" placeholder="Ingresa la reseña" style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="overview">Reseña</label>
-                                <div class="invalid-feedback" data-sb-feedback="overview:required">La reseña es OBLIGATORIA</div>
+                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem" data-sb-validations="required">{{ $data->sinopsis }}</textarea>
+                                <label for="sinopsis">Sinopsis</label>
+                                <div class="invalid-feedback" data-sb-feedback="sinopsis:required">La sinopsis es OBLIGATORIA</div>
                             </div>
                            
                             <div class="d-none" id="submitSuccessMessage">
@@ -133,7 +134,7 @@
                             
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido modificar el juego</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Arreglar el desastre</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Arreglar el desastre</button></div>
                         </form>
                     </div>
                 </div>

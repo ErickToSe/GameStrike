@@ -119,9 +119,9 @@
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la reseña" style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="sinopsis">Sinopsis</label>
-                                <div class="invalid-feedback" data-sb-feedback="sinopsis:required">La reseña es OBLIGATORIA</div>
+                                <div class="invalid-feedback" data-sb-feedback="sinopsis:required">La sinopsis es OBLIGATORIA</div>
                             </div>
                            
                             <div class="d-none" id="submitSuccessMessage">

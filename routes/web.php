@@ -19,15 +19,6 @@ use App\Http\Controllers\ResegnaController;
 |
 */
 
-Route::get('/categoriaTest', function () {
-    return view('games');
-});
-
-Route::get('/newGameTest', function () {
-    return view('edit-game');
-});
-
-
 /*   INICIA PARTE DE VERIFICACION EMAIL*/
 
 Route::get('/email/verify', function () {
@@ -48,16 +39,17 @@ Route::post('/email/verification-notification', function (Request $request) {
 
 /*   TERMINA PARTE DE VERIFICACION EMAIL*/
 
-
+/*   PUBLIC ROUTES    */
 Route::get('/Categoria/{genero}', [GeneroController::class, 'show'])->name('games');
 Route::get('/', [GeneroController::class, 'index'])->name('index');
 Route::resource('genero', GeneroController::class);
 
 /*   ADMIN ROUTES    */
+Route::get('/Juego/Editar-Juego', [JuegoController::class, 'edit'])->name('juego.editGame');
+Route::post('/Juego/Editar-Juego/update', [JuegoController::class, 'updateGame'])->name('juego.updateGame');
 Route::post('/Juego/Agregar-Juego/store', [JuegoController::class, 'store'])->name('juego.store');
 Route::post('/Juego/Agregar-Juego', [JuegoController::class, 'create'])->name('add-new-game');
 Route::post('/Juego/{juego}/destroy', [JuegoController::class, 'destroy'])->name('juego.delete');
-Route::post('/Juego/{juego}/update', [JuegoController::class, 'update'])->name('juego.update');
 /*   PUBLIC ROUTES    */
 Route::get('/Juegos', [JuegoController::class, 'index'])->name('all-games');
 Route::get('/Juego/{juego}', [JuegoController::class, 'showResegnas'])->name('game-profile');

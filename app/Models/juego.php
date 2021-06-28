@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class juego extends Model
 {
     use HasFactory;
-
+    protected $fillable = ['name', 'desarrolladora', 'image_route', 'sinopsis'];
     public function resegnas()
     {
         return $this->hasMany(resegna::class);

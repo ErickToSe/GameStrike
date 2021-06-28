@@ -85,7 +85,9 @@ class ResegnaController extends Controller
      */
     public function destroy(Request $request)
     {
-        resegna::find($request->id)->update(['isDeleted'=>true]);
-        return redirect()->route('game-profile', resegna::findOrFail($request->id)->juego_id);
+        $data = resegna::find($request->id);
+        $data->isDeleted = true;
+        $data->save();
+        return redirect()->route('game-profile', $data->juego_id);
     }
 }
