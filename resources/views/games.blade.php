@@ -66,6 +66,20 @@
             </div>
         </div>
        
+       <!-- Boton para agregar juegos solo para admin-->
+       <section class="Todos-los-juegos" id="boton">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                    <br>
+                        <form method="GET" action="{{ url('/')}}">
+                             <button class="btn btn-primary btn-xl" >Agregar juego</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - GameSrike</div></div>

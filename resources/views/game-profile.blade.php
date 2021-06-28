@@ -54,6 +54,10 @@
                             </p>
                             <p class="text-white-75 mb-5">Promedio:<br>{{$juego->resegnas->avg('calificacion')}}/10</p>
                             <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
+
+                            <button id=""href="#" class="btn btn-secondary float">Editar</button> <button id=""href="#" class="btn btn-secondary float">Eliminar</button> 
+
+                            <!-- Boton de editar y eliminar para administrador -->
                         </div>
                     </div>
                 </div>
@@ -69,10 +73,14 @@
                         <hr>
                         <!-- Aqui iria el loop ------------------------------------------------------------------------------------ -->
                         @foreach($juego->resegnas as $resegna)
-                            <p class="text-muted mb-5">{{$resegna->user->name}}</p>
+                            
+                            <button id=""href="#" class="btn btn-secondary float-start">Eliminar</button> 
+                            <br><br>
+                            <p class="text-muted mb-5">{{$resegna->user->name}}</p>   
                             <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
                             <p class="text-muted mb-5">{{$resegna->contenido}}</p>
-                        <hr>
+                            
+                            <hr>
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
                         <form action="{{ route('formulario-reseña', $juego) }}" method="POST">
