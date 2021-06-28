@@ -20,7 +20,7 @@
 				<h3>Inicar sesion</h3>
 			</div>
 			<div class="card-body">
-				<form method="POST" action="{{ route('/') }}">
+				<form method="POST" action="{{ route('login') }}">
                     @csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">

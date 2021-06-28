@@ -36,7 +36,7 @@ Route::get('/email/verify', function () {
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
 
-    return redirect('/');
+    return redirect()->route('index');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {
@@ -58,6 +58,4 @@ Route::post('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create']
 Route::post('/resegna.store', [ResegnaController::class, 'store'])->name('resegna.store');
 Route::resource('resegna', ResegnaController::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [GeneroController::class, 'index'])->name('dashboard');
