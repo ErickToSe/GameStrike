@@ -26,7 +26,12 @@
                         <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
                         @if (Route::has('login'))   
                             @auth
-                                <li class="nav-item"><a class="nav-link" href="{{ url('/Perfil') }}">Log Out</a></li>
+                                
+                            <form method="POST" name="logout" action="{{ route('logout') }}">
+                                @csrf
+                                <li class="nav-item"><a class="nav-link" href="javascript:document.logout.submit()">Log Out</a></li>
+                            </form>
+
                             @else
                                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                                 @if (Route::has('register'))
