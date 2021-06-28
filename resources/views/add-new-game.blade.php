@@ -37,7 +37,81 @@
                             </div>
                             <!-- Generos number input-->
                             <div class="form-floating mb-3">
-                                
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Generos</div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Accion" name="Accion">
+                                    <label class="form-check-label" for="Accion">
+                                        Accion
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Aventura" name="Aventura">
+                                    <label class="form-check-label" for="Aventura">
+                                        Aventura
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Rol" name="Rol">
+                                    <label class="form-check-label" for="Rol">
+                                         Rol
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Simulación" name="Simulacion">
+                                    <label class="form-check-label" for="Simulación">
+                                        Simulación
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Terror" name="Terror">
+                                    <label class="form-check-label" for="Terror">
+                                        Terror
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Plataformas" name="Plataformas">
+                                    <label class="form-check-label" for="Plataformas">
+                                        Plataformas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Disparos" name="Disparos">
+                                    <label class="form-check-label" for="Disparos">
+                                        Disparos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Peleas" name="Peleas">
+                                    <label class="form-check-label" for="Peleas">
+                                        Peleas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Musical" name="Musical">
+                                    <label class="form-check-label" for="Musical">
+                                        Musical
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Estrategia" name="Estrategia">
+                                    <label class="form-check-label" for="Estrategia">
+                                        Estrategia
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Deportes" name="Deportes">
+                                    <label class="form-check-label" for="Deportes">
+                                        Deportes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="Carreras" name="Carreras" >
+                                    <label class="form-check-label" for="Carreras">
+                                        Carreras
+                                    </label>
+                                </div>
                             </div>
                             <!-- Image input-->
                             <div class="form-floating mb-3">

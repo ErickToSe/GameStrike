@@ -29,7 +29,7 @@ Route::get('/categoriaTest', function () {
 });
 
 Route::get('/newGameTest', function () {
-    return view('edit-review');
+    return view('edit-game');
 });
 
 /*   INICIA PARTE DE VERIFICACION EMAIL*/
