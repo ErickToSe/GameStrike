@@ -101,7 +101,7 @@
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
                         @auth
-                                <a class="btn btn-primary btn-xl" href="{{ route('formulario-reseña', $juego) }}">¡Crea tu propia reseña!</a>
+                            <a class="btn btn-primary btn-xl" href="{{ route('formulario-reseña', $juego) }}">¡Crea tu propia reseña!</a>
                         @endauth
                     </div>
                 </div>

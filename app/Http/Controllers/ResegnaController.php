@@ -7,6 +7,7 @@ use App\Models\juego;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class ResegnaController extends Controller
 {
@@ -85,6 +86,7 @@ class ResegnaController extends Controller
      */
     public function destroy(Request $request)
     {
+        Gate::authorize('admin-functions');
         $data = resegna::find($request->id);
         $data->isDeleted = true;
         $data->save();
