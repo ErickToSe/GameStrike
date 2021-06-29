@@ -65,7 +65,7 @@
                                 </form>
                                 <form method="GET" action="{{ route('juego.edit', $juego) }}"> @csrf
                                     <input type="hidden" name="id" value="{{ $juego->id }}">
-                                    <button class="btn btn-secondary float">Editar</button>
+                                    <button class="btn btn-secondary float" href="{{ route('juego.edit', $juego) }}">Editar</button>
                                 </form>
                             @endauth
                         </div>
