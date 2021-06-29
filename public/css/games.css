@@ -7,8 +7,14 @@
 }
 
 .img-size{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background: linear-gradient(to bottom, rgba(145, 90, 51, 0.8) 0%, rgba(126, 86, 58, 0.8) 100%);
+  position:absolute;
+  z-index: -1;
+  width: 650px;
   height: 350px;
-  width: 650px; 
 }
 
 :root {
