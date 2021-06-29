@@ -54,9 +54,9 @@
                     @foreach ($genero->juegos as $juego)
                         @if ($juego->isDeleted === 0)
                             <div class="col-lg-4 col-sm-6">
-                                <form action="{{ route('game-profile', $juego) }}" method="GET">
+                                <form action="{{ route('game-profile', $juego) }}" method="GET"> @csrf
                                     <button class="portfolio-box img-size img-button" type="submit">
-                                        <img class="img-size" src={{asset($juego->image_route)}} alt="Game_Image" />
+                                        <img class="img-size" src="{{asset($juego->image_route)}}" alt="Game_Image" />
                                         <div class="portfolio-box-caption">
                                             <div class="project-name">{{ $juego->name }}</div>
                                         </div>
