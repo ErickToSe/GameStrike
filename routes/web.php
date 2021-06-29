@@ -62,4 +62,6 @@ Route::post('/resegna.store', [ResegnaController::class, 'store'])->name('resegn
 Route::post('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create'])->name('formulario-reseña');
 Route::resource('resegna', ResegnaController::class);
 
+//Route::resource('juego',JuegoController::class)->except(['edit', 'update']);
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [GeneroController::class, 'index'])->name('dashboard');

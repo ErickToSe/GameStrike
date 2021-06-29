@@ -45,7 +45,16 @@ class JuegoController extends Controller
         $newJuego->sinopsis = $request->sinopsis;
         $newJuego->desarrolladora = $request->desarrolladora;
         $newJuego->image_route = $request->image_route;
+        dd($request->all()); 
+        if($request->hasFile('juego') && $request->file('juego')->isValid()){
+            $image_route = $request->image_route->store('images_games');
+            
+            $newJuego->image_route = $request->image_route;
+            
+            
+        }  
         $newJuego->save();
+        
         if($request->has('Accion')){
             $newJuego->generos()->attach(1);
         }

@@ -22,7 +22,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
                         <!-- <form method="GET" action="{{ url('/formulario') }}"> -->
-                        <form method="POST" action="{{ route('juego.store') }}" id="contactForm" > @csrf
+                        <form method="POST" action="{{ route('juego.store') }}" id="contactForm" enctype="multipart/form-data" > @csrf
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
@@ -115,9 +115,7 @@
                             </div>
                             <!-- Image input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="image_route" name="image_route" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
-                                <label for="image_route">URL de la imagen</label>
-                                <div class="invalid-feedback" data-sb-feedback="image_route:required">La imagen es requerida</div>
+                                <input type="file" name="image_route" id="image_route">
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
