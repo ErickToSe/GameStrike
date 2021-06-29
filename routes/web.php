@@ -48,7 +48,7 @@ Route::resource('genero', GeneroController::class);
 Route::get('/Juego/Editar-Juego', [JuegoController::class, 'edit'])->name('juego.editGame');
 Route::post('/Juego/Editar-Juego/update', [JuegoController::class, 'updateGame'])->name('juego.updateGame');
 Route::post('/Juego/Agregar-Juego/store', [JuegoController::class, 'store'])->name('juego.store');
-Route::post('/Juego/Agregar-Juego', [JuegoController::class, 'create'])->name('add-new-game');
+Route::get('/Juego/Agregar-Juego', [JuegoController::class, 'create'])->name('add-new-game');
 Route::post('/Juego/{juego}/destroy', [JuegoController::class, 'destroy'])->name('juego.delete');
 /*   PUBLIC ROUTES    */
 Route::get('/Juegos', [JuegoController::class, 'index'])->name('all-games');

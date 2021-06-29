@@ -65,7 +65,7 @@
                                 </form>
                                 <form method="GET" action="{{ route('juego.edit', $juego) }}"> @csrf
                                     <input type="hidden" name="id" value="{{ $juego->id }}">
-                                    <button class="btn btn-secondary float">Editar</button>
+                                    <button class="btn btn-secondary float" href="{{ route('juego.edit', $juego) }}">Editar</button>
                                 </form>
                             @endauth
                         </div>
@@ -100,14 +100,10 @@
 
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
-<<<<<<< HEAD
                         @auth
                             <a class="btn btn-primary btn-xl" href="{{ route('formulario-reseña', $juego) }}">¡Crea tu propia reseña!</a>
                         @endauth
-=======
-                        <a class="btn btn-primary btn-xl" href="{{ route('formulario-reseña', $juego) }}">¡Crea tu propia reseña!</a>
-                        
->>>>>>> 44706be579dda045810943b12b6e605b5fdb00f4
+
                     </div>
                 </div>
             </div>

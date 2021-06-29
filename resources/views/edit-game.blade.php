@@ -54,15 +54,19 @@
                             <!-- Name input-->
                             <input type="hidden" name="id" value="{{ $data->id }}">
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" name="name" type="text" value="{{ $data->name }}" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" value="{{ $data->name }}" placeholder="Ingresa el nombre del juego"  />
                                 <label for="name">Nombre del juego</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido</div>
+                                @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <!-- Developer  input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" value="{{ $data->desarrolladora }}" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
+                                <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" value="{{ $data->desarrolladora }}" placeholder="Ingresa la desarrolladora aqui"  />
                                 <label for="desarrolladora">Desarrolladora</label>
-                                <div class="invalid-feedback" data-sb-feedback="desarrolladora:required">La desarrolladora es nesesaria.</div>
+                                @error('desarolladora')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <!-- Generos number input-->
                             <div class="form-floating mb-3">
@@ -148,18 +152,13 @@
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem" data-sb-validations="required">{{ $data->sinopsis }}</textarea>
+                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem">{{ $data->sinopsis }}</textarea>
                                 <label for="sinopsis">Sinopsis</label>
-                                <div class="invalid-feedback" data-sb-feedback="sinopsis:required">La sinopsis es OBLIGATORIA</div>
+                                @error('sinopsis')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                            
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">¡En hora buena!¡Arreglase el desastre de otro usuario!</div>
-                                </div>
-                            </div>
-                            
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido modificar el juego</div></div>
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Arreglar el desastre</button></div>
                         </form>

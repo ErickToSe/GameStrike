@@ -50,15 +50,6 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                    @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
@@ -76,6 +67,9 @@
                                 <label for="contenido">Reseña</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">La reseña es necesaria!</div>
                             </div>
+                            @error('contenido')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                             <input type="hidden" name="juego_id" value="{{ $juego->id }}">
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-primary btn-xl Enable" id="submitButton" type="submit">Subir reseña!</button></div>

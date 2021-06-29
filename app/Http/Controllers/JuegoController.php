@@ -42,6 +42,11 @@ class JuegoController extends Controller
     public function store(Request $request)
     {
         Gate::authorize('admin-functions');
+        $request->validate([
+            'name' => ['required','min:2','max:255'],
+            'desarrolladora' => ['required','min:2','max:255'],
+            'sinopsis' => ['required','min:5','max:1000'],
+        ]);
         $allGeneros = genero::all();
         $newJuego = new juego();
         $newJuego->name = $request->name;

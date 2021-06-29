@@ -54,15 +54,19 @@
                         <form method="POST" action="{{ route('juego.store') }}" id="contactForm" enctype="multipart/form-data" > @csrf
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Ingresa el nombre del juego" data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Ingresa el nombre del juego" />
                                 <label for="name">Nombre del juego</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido</div>
+                                @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                 @enderror
                             </div>
                             <!-- Developer  input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
+                                <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" placeholder="Ingresa la desarrolladora aqui"  />
                                 <label for="desarrolladora">Desarrolladora</label>
-                                
+                                @error('desarrolladora')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <!-- Generos number input-->
                             <div class="form-floating mb-3">
@@ -143,23 +147,21 @@
                                 </div>
                             </div>
                             <!-- Image input-->
+                            <div class="text-center mb-3">
+                                    <div class="fw-bolder">Subir foto:</div>
+                                </div>
                             <div class="form-floating mb-3">
                                 <input type="file" name="image_route" id="image_route">
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem" ></textarea>
                                 <label for="sinopsis">Sinopsis</label>
-                                <div class="invalid-feedback" data-sb-feedback="sinopsis:required">La sinopsis es OBLIGATORIA</div>
+                                @error('sinopsis')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                            
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">¡En hora buena!¡ Has creado un juego para escribir reseñas que nadie pidio!</div>
-                                </div>
-                            </div>
-                            
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">No se a podido subri la reseña!</div></div>
                             <!-- Submit Button-->
                             <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Agregar juego</button></div>
                         </form>

@@ -77,10 +77,8 @@
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6 text-center">
-                        <br>
-                            <form method="POST" action="{{ route('add-new-game') }}"> @csrf
-                                <button class="btn btn-primary btn-xl" >Agregar juego</button>
-                            </form>
+                        <br>  
+                            <a class="btn btn-primary btn-xl" href="{{ route('add-new-game') }}">Agregar juego</a> 
                         </div>
                     </div>
                 </div>
