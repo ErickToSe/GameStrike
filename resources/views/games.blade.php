@@ -18,14 +18,16 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Categorias</a></li>
                         @if (Route::has('login'))   
                             @auth
-                                <form method="POST" name="logout" action="{{ route('logout') }}">
-                                    @csrf
-                                    <li class="nav-item"><a class="nav-link" href="http://gamestrike.test/user/profile">Perfil</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="javascript:document.logout.submit()">Log Out</a></li>
-                                </form>
+                                <li class="nav-item">
+                                    <form method="POST" name="logout" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a class="nav-link" href="javascript:document.logout.submit()">Log Out</a></li>
+                                    </form>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="http://gamestrike.test/user/profile">Perfil</a></li> 
                             @else
                                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                                 @if (Route::has('register'))

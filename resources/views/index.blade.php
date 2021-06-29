@@ -6,11 +6,6 @@
 
 @section('OwnCSS')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-     <!-- SimpleLightbox plugin JS-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 @endsection
 
 @section('content')
@@ -22,17 +17,17 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#page-top">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Categorias</a></li>
                         @if (Route::has('login'))   
                             @auth
-                                
-                            <form method="POST" name="logout" action="{{ route('logout') }}">
-                                @csrf
+                                <li class="nav-item">
+                                    <form method="POST" name="logout" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a class="nav-link" href="javascript:document.logout.submit()">Log Out</a></li>
+                                    </form>
+                                </li>
                                 <li class="nav-item"><a class="nav-link" href="http://gamestrike.test/user/profile">Perfil</a></li> 
-                                <li class="nav-item"><a class="nav-link" href="javascript:document.logout.submit()">Log Out</a></li>
-                            </form>
-
                             @else
                                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                                 @if (Route::has('register'))
