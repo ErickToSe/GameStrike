@@ -47,7 +47,7 @@ class JuegoController extends Controller
             'desarrolladora' => ['required','min:2','max:255'],
             'sinopsis' => ['required','min:5','max:1000'],
         ]);
-        $allGeneros = genero::all();
+        $allGeneros = genero::with('juegos')->get();
         $newJuego = new juego();
         $newJuego->name = $request->name;
         $newJuego->sinopsis = $request->sinopsis;
@@ -218,7 +218,7 @@ class JuegoController extends Controller
     public function destroy(juego $juego)
     {
         Gate::authorize('admin-functions');
-        $allGeneros = genero::all();
+        $allGeneros = genero::with('juegos')->get();
         $juego->isDeleted = true;
         $juego->save();
         return redirect()->route('index', compact('allGeneros'));
