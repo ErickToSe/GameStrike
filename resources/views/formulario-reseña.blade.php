@@ -5,7 +5,7 @@
 @endsection
 
 @section('OwnCSS')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/game-profile.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/add-new-game.css') }}">
 @endsection
 
 @section('content')

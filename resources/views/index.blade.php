@@ -18,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Categorias</a></li>
                         @if (Route::has('login'))   
                             @auth
                                 <li class="nav-item">
