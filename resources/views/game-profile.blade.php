@@ -96,10 +96,8 @@
 
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
-                        <form action="{{ route('formulario-reseña', $juego) }}" method="POST">
-                            @csrf
-                            <button class="btn btn-primary btn-xl" href="">¡Crea tu propia reseña!</button>
-                        </form>
+                        <a class="btn btn-primary btn-xl" href="{{ route('formulario-reseña', $juego) }}">¡Crea tu propia reseña!</a>
+                        
                     </div>
                 </div>
             </div>

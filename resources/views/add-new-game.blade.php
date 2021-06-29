@@ -62,7 +62,7 @@
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="desarrolladora" name="desarrolladora" type="text" placeholder="Ingresa la desarrolladora aqui" data-sb-validations="required" />
                                 <label for="desarrolladora">Desarrolladora</label>
-                                <div class="invalid-feedback" data-sb-feedback="desarrolladora:required">La desarrolladora es nesesaria.</div>
+                                
                             </div>
                             <!-- Generos number input-->
                             <div class="form-floating mb-3">
