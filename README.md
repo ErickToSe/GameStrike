@@ -40,12 +40,12 @@ incumplan con el codigo de etica de las web.
 
 ## Cuentas de usuario
 
-Admin:
-SoyAdmi@gmail.com
+#Admin:
+SoyAdmi@gmail.com<br>
 password
 
-User
-NoSoyAdmi@gmail.com
+#User
+NoSoyAdmi@gmail.com<br>
 password
 
 ---
