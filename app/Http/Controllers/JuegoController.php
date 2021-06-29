@@ -46,7 +46,7 @@ class JuegoController extends Controller
         $newJuego->desarrolladora = $request->desarrolladora;
 
         if($request->hasFile('image_route')){
-            $image_route = $request->file('image_route')->store('gameImages');
+            $image_route = $request->file('image_route')->store('images\gameImages');
             $newJuego->image_route = $image_route;
         }
 
