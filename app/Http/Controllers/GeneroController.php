@@ -48,7 +48,7 @@ class GeneroController extends Controller
      */
     public function show(genero $genero)
     {
-        $juegos = juego::get();
+        $juegos = juego::with('generos')->get();
         return view('games', compact('genero', 'juegos'));
     }
 
