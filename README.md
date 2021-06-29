@@ -10,14 +10,17 @@
 
 ## Descripción:
 
-_Game Strike es un sitio web donde los usuarios pueden dejar sus opiniones y reseñas de videojuegos, otorgando un punjate a base de las opinones de los jugadores_
+    _Game Strike_ es un sitio web donde los usuarios pueden dejar sus opiniones y reseñas de videojuegos, 
+otorgando un punjate a base de las opinones de los jugadores
 
-Los visitantes podran mirar las reseñas de escritas por los usuarios y el puntaje generado por estas en distintos juegos, pudiendo buscar juegos por categoria.
+    Los visitantes podran mirar las reseñas de escritas por los usuarios y el puntaje generado por estas 
+en distintos juegos, pudiendo buscar juegos por categoria.
 
-Los usuarios registrados podran dejar su reseña sobre los juegos que hayan probado.
+    Los usuarios registrados podran dejar su reseña sobre los juegos que hayan probado.
 
-Los administradores agregaran nuevos juegos al catalogo o podran eleminiarlos de ser pertinente, ademas podran modificar los datos de los juegos, ademas, tendran 
-el privilegio de eliminar las reseñas que incumplan con el codigo de etica de las web.
+    Los administradores agregaran nuevos juegos al catalogo o podran eleminiarlos de ser pertinente, ademas 
+podran modificar los datos de los juegos, ademas, tendran el privilegio de eliminar las reseñas que 
+incumplan con el codigo de etica de las web.
 
 ---
 
