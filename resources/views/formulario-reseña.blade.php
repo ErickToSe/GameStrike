@@ -48,6 +48,19 @@
                         <p class="text-muted mb-5">Dejate llevar por los sentimiento encontrados sobre <b>{{ $juego->name }}!</b></p>
                     </div>
                 </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6 text-center">
+                    @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                    </div>
+                </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
                         <form action="{{ route('resegna.store') }}" method="POST">

@@ -58,8 +58,13 @@ Route::resource('juego', JuegoController::class);
 /*   ADMIN ROUTES    */
 Route::post('/juego/resegna/destroy', [ResegnaController::class, 'destroy'])->name('resegna.delete');
 /*   USERS ROUTES    */
+<<<<<<< HEAD
 Route::post('/resegna.store', [ResegnaController::class, 'store'])->name('resegna.store')->middleware('auth');
 Route::post('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create'])->name('formulario-reseña')->middleware('auth');
+=======
+Route::post('/resegna.store', [ResegnaController::class, 'store'])->name('resegna.store');
+Route::get('/Juego/{juego}/Nueva-Resegna', [ResegnaController::class, 'create'])->name('formulario-reseña');
+>>>>>>> 44706be579dda045810943b12b6e605b5fdb00f4
 Route::resource('resegna', ResegnaController::class);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [GeneroController::class, 'index'])->name('dashboard');

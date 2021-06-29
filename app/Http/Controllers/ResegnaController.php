@@ -11,6 +11,13 @@ use Illuminate\Support\Facades\Gate;
 
 class ResegnaController extends Controller
 {
+    /*private $rules;
+    
+    public function __cosntruct(){
+        $this->rules = [
+            
+    }*/
+
     /**
      * Display a listing of the resource.
      *
@@ -40,6 +47,9 @@ class ResegnaController extends Controller
     public function store(Request $request)
     {
         $request->merge(['user_id' => Auth::id()]);
+        $request->validate([
+            'contenido' => ['required','min:5','max:255'],
+        ]);
         resegna::create($request->all());
         return redirect()->route('game-profile', $request->juego_id);
     }
