@@ -1,7 +1,7 @@
 @extends('layouts/basicHead')
 
 @section('tittle')
-   <title> <img>Editar juego</title>
+   <title>Editar juego</title>
 @endsection
 
 @section('OwnCSS')

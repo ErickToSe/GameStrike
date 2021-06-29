@@ -18,7 +18,7 @@ class CreateJuegosTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('sinopsis', 2048);
-            $table->string('image_route')->default('image\gameImages\default.jpg');
+            $table->string('image_route')->default('images\gameImages\default.jpg');
             $table->string('desarrolladora');
             $table->boolean('isDeleted')->default(false);
             $table->timestamp('updated_at')->nullable();
