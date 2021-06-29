@@ -49,7 +49,9 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">Cuando nadie te lo pidio</p>
-                        <a class="btn btn-primary btn-xl" href="{{ route('register') }}">Crea una cuenta Gratis ¡YA!</a>
+                        @guest
+                            <a class="btn btn-primary btn-xl" href="{{ route('register') }}">Crea una cuenta Gratis ¡YA!</a>
+                        @endguest
                     </div>
                 </div>
             </div>

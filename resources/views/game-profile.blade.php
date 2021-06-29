@@ -59,13 +59,15 @@
                             <p class="text-white-75 mb-5">Promedio:<br>{{$juego->resegnas->avg('calificacion')}}/10</p>
                             <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
                             <!-- Boton de editar y eliminar para administrador -->
-                            <form method="POST" action="{{ route('juego.delete', $juego) }}"> @csrf
-                                <button class="btn btn-secondary float">Eliminar</button>
-                            </form>
-                            <form method="GET" action="{{ route('juego.edit', $juego) }}"> @csrf
-                                <input type="hidden" name="id" value="{{ $juego->id }}">
-                                <button class="btn btn-secondary float">Editar</button>
-                            </form>
+                            @auth
+                                <form method="POST" action="{{ route('juego.delete', $juego) }}"> @csrf
+                                    <button class="btn btn-secondary float">Eliminar</button>
+                                </form>
+                                <form method="GET" action="{{ route('juego.edit', $juego) }}"> @csrf
+                                    <input type="hidden" name="id" value="{{ $juego->id }}">
+                                    <button class="btn btn-secondary float">Editar</button>
+                                </form>
+                            @endauth
                         </div>
                     </div>
                 </div>
@@ -83,10 +85,12 @@
                         @foreach($juego->resegnas as $resegna)
 
                             @if ($resegna->isDeleted === 0)
-                                <form method="POST" action="{{ route('resegna.delete') }}"> @csrf
-                                    <input type="hidden" name="id" value="{{ $resegna->id }}">
-                                    <button class="btn btn-secondary float-start">Eliminar</button>
-                                </form>
+                                @auth
+                                    <form method="POST" action="{{ route('resegna.delete') }}"> @csrf
+                                        <input type="hidden" name="id" value="{{ $resegna->id }}">
+                                        <button class="btn btn-secondary float-start">Eliminar</button>
+                                    </form>
+                                @endauth
                                 <br><br>
                                 <p class="text-muted mb-5">{{$resegna->user->name}}</p>
                                 <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
@@ -96,10 +100,9 @@
 
                         @endforeach
                         <!-- Aqui terminaria el loop ------------------------------------------------------------------------------ -->
-                        <form action="{{ route('formulario-reseña', $juego) }}" method="POST">
-                            @csrf
-                            <button class="btn btn-primary btn-xl" href="">¡Crea tu propia reseña!</button>
-                        </form>
+                        @auth
+                                <a class="btn btn-primary btn-xl" href="{{ route('formulario-reseña', $juego) }}">¡Crea tu propia reseña!</a>
+                        @endauth
                     </div>
                 </div>
             </div>

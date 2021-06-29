@@ -6,6 +6,7 @@ use App\Models\juego;
 use App\Models\genero;
 use App\Models\resegna;
 use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 
 class JuegoController extends Controller
@@ -28,6 +29,7 @@ class JuegoController extends Controller
      */
     public function create()
     {
+        Gate::authorize('admin-functions');
         return view('add-new-game');
     }
 
@@ -39,6 +41,7 @@ class JuegoController extends Controller
      */
     public function store(Request $request)
     {
+        Gate::authorize('admin-functions');
         $allGeneros = genero::all();
         $newJuego = new juego();
         $newJuego->name = $request->name;
@@ -116,6 +119,7 @@ class JuegoController extends Controller
      */
     public function edit(Request $request, juego $juego)
     {
+        Gate::authorize('admin-functions');
         $data = juego::find($request->id);
         return view('edit-game', compact('data'));
     }
@@ -129,6 +133,7 @@ class JuegoController extends Controller
      */
     public function updateGame(Request $request)
     {
+        Gate::authorize('admin-functions');
         $resegnas = resegna::get();
         $juego = juego::find($request->id);
         $juego->update($request->except('_token', '_method'));
@@ -203,6 +208,7 @@ class JuegoController extends Controller
      */
     public function destroy(juego $juego)
     {
+        Gate::authorize('admin-functions');
         $allGeneros = genero::all();
         $juego->isDeleted = true;
         $juego->save();
