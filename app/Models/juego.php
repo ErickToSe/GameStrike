@@ -18,4 +18,8 @@ class juego extends Model
     {
         return $this->belongsToMany(genero::class);
     }
+
+    protected $appends = [
+        'image_route',
+    ];
 }
