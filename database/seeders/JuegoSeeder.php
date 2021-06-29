@@ -45,7 +45,7 @@ class JuegoSeeder extends Seeder
             [
                 'name' => 'Halo 3',
                 'sinopsis' => ' Toma el control del Spartan 117 y termina la lucha contra el Covenant y la amenaza de los Flood de una vez por todas.',
-                'image_route' => 'images\gameImages\juego_1.jpg',
+                'image_route' => 'image\gameImages\juego_1.jpg',
                 'desarrolladora' => 'Bungie Studios'
             ]
         );

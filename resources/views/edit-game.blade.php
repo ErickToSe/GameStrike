@@ -115,9 +115,7 @@
                             </div>
                             <!-- Image input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="image_route" name="image_route" value="{{ $data->image_route }}" type="text" placeholder="Ingresa la url de la imagen" data-sb-validations="required" />
-                                <label for="image">URL de la imagen</label>
-                                <div class="invalid-feedback" data-sb-feedback="image_route:required">La imagen es requerida</div>
+                                <input type="file" name="image_route" id="image_route">
                             </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">

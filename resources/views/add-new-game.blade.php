@@ -114,7 +114,9 @@
                                 </div>
                             </div>
                             <!-- Image input-->
-                            
+                            <div class="form-floating mb-3">
+                                <input type="file" name="image_route" id="image_route">
+                            </div>
                             <!-- Overview input-->
                             <div class="form-floating mb-3">
                                 <textarea class="form-control" id="sinopsis" name="sinopsis" type="text" placeholder="Ingresa la sinopsis" style="height: 10rem" data-sb-validations="required"></textarea>

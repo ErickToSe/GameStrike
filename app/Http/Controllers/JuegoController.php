@@ -46,7 +46,7 @@ class JuegoController extends Controller
         $newJuego->desarrolladora = $request->desarrolladora;
 
         if($request->hasFile('image_route')){
-            $image_route = $request->file('image_route')->store('images\gameImages');
+            $image_route = $request->file('image_route')->store('gameImages');
             $newJuego->image_route = $image_route;
         }
 
@@ -131,7 +131,6 @@ class JuegoController extends Controller
     {
         $resegnas = resegna::get();
         $juego = juego::find($request->id);
-        //dd($data);
         $juego->update($request->except('_token', '_method'));
         if($request->has('Accion')){
             $juego->generos()->attach(1);
