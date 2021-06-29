@@ -136,6 +136,10 @@ class JuegoController extends Controller
         Gate::authorize('admin-functions');
         $resegnas = resegna::get();
         $juego = juego::find($request->id);
+        if($request->hasFile('image_route')){
+            $image_route = $request->file('image_route')->store('images\gameImages');
+            $juego->image_route = $image_route;
+        }
         $juego->update($request->except('_token', '_method'));
         if($request->has('Accion')){
             $juego->generos()->attach(1);
