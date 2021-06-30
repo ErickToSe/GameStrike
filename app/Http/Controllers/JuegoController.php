@@ -139,13 +139,18 @@ class JuegoController extends Controller
     public function updateGame(Request $request)
     {
         Gate::authorize('admin-functions');
+        $request->validate([
+            'name' => ['required','min:2','max:255'],
+            'desarrolladora' => ['required','min:2','max:255'],
+            'sinopsis' => ['required','min:5','max:1000'],
+        ]);
         $resegnas = resegna::get();
         $juego = juego::find($request->id);
-        if($request->hasFile('image_route')){
+        if($request->hasFile('image_route')) {
             $image_route = $request->file('image_route')->store('images\gameImages');
             $juego->image_route = $image_route;
         }
-        $juego->update($request->except('_token', '_method'));
+        $juego->update($request->except('image_route', '_token', '_method'));
         if($request->has('Accion')){
             $juego->generos()->attach(1);
         } else {

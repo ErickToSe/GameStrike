@@ -50,7 +50,7 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form id="editForm" action="{{ route('juego.updateGame') }}" method="POST"> @csrf
+                        <form action="{{ route('juego.updateGame') }}" method="POST" id="contactForm" enctype="multipart/form-data"> @csrf
                             <!-- Name input-->
                             <input type="hidden" name="id" value="{{ $data->id }}">
                             <div class="form-floating mb-3">
