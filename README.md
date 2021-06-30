@@ -35,7 +35,7 @@ incumplan con el codigo de etica de las web.
 7. Crear la base de datos en tu sistema gestor de bases de datos: `CREATE DATABASE GameStrike`
 8. Configurar nombre de base de datos en _.env_ y ejecutar migraciones: `php artisan migrate`
 9. Ejecutar seeds: `php artisan db:seed`
-10. Borrar el acceso directo en public/images/gameImages si existe.
+10. Borrar el acceso directo en public/images a gameImages si existe.
 11. Link storage: `php artisan storage:link`
 
 ---
