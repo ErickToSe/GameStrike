@@ -59,8 +59,8 @@
                             <p class="text-white-75 mb-5">Promedio:<br>{{$juego->resegnas->avg('calificacion')}}/10</p>
                             <p class="text-white-75 mb-5">Sinopisis:<br>{{$juego->sinopsis}}</p>
                             <!-- Boton de editar y eliminar para administrador -->
-                            @if (Auth::user()->isAdmin) 
-                                @auth
+                            @auth
+                                @if (Auth::user()->isAdmin) 
                                     <form method="POST" action="{{ route('juego.delete', $juego) }}"> @csrf
                                         <button class="btn btn-secondary float">Eliminar</button>
                                     </form>
@@ -68,8 +68,8 @@
                                         <input type="hidden" name="id" value="{{ $juego->id }}">
                                         <button class="btn btn-secondary float" href="{{ route('juego.edit', $juego) }}">Editar</button>
                                     </form>
-                                @endauth
-                            @endif
+                                @endif
+                            @endauth
                         </div>
                     </div>
                 </div>
@@ -87,14 +87,14 @@
                         @foreach($juego->resegnas as $resegna)
 
                             @if ($resegna->isDeleted === 0)
-                                @if (Auth::user()->isAdmin) 
-                                    @auth
+                                @auth
+                                    @if (Auth::user()->isAdmin) 
                                         <form method="POST" action="{{ route('resegna.delete') }}"> @csrf
                                             <input type="hidden" name="id" value="{{ $resegna->id }}">
                                             <button class="btn btn-secondary float-start">Eliminar</button>
                                         </form>
-                                    @endauth
-                                @endif
+                                    @endif
+                                @endauth
                                 <br><br>
                                 <p class="text-muted mb-5">{{$resegna->user->name}}</p>
                                 <p class="text-muted mb-5">{{$resegna->calificacion}}/10</p>
