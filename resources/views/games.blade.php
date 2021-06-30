@@ -73,16 +73,18 @@
        
        <!-- Boton para agregar juegos solo para admin-->
        @auth
-        <section class="Todos-los-juegos" id="boton">
-                <div class="container px-4 px-lg-5">
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6 text-center">
-                        <br>  
-                            <a class="btn btn-primary btn-xl" href="{{ route('add-new-game') }}">Agregar juego</a> 
+            @if (Auth::user()->isAdmin) 
+                <section class="Todos-los-juegos" id="boton">
+                    <div class="container px-4 px-lg-5">
+                        <div class="row gx-4 gx-lg-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6 text-center">
+                            <br>  
+                                <a class="btn btn-primary btn-xl" href="{{ route('add-new-game') }}">Agregar juego</a> 
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            @endif
         @endauth
         <!-- Footer-->
         <footer class="bg-light py-5">
